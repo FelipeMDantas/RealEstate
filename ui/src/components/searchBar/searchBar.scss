@@ -18,10 +18,6 @@
       &:first-child {
         border-top-left-radius: 5px;
         border-right: none;
-
-        @include sm {
-          border-bottom: 1px solid #999;
-        }
       }
 
       &:last-child {
@@ -58,15 +54,21 @@
       }
 
       @include md {
-        width: auto;
+        width: 200px;
         &:nth-child(2),
         &:nth-child(3) {
-          width: auto;
+          width: 200px;
         }
       }
 
       @include sm {
         padding: 20px;
+        border: 1px solid #999;
+        width: auto;
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: auto;
+        }
       }
     }
     button {
@@ -74,6 +76,10 @@
       cursor: pointer;
       background-color: #fece51;
       flex: 1;
+
+      @include sm {
+        padding: 10px;
+      }
 
       img {
         width: 24px;

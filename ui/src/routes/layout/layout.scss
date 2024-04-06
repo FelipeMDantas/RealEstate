@@ -1,4 +1,4 @@
-@import "./responsive.scss";
+@import "../../responsive.scss";
 
 .layout {
   height: 100vh;
@@ -11,12 +11,12 @@
   flex-direction: column;
 
   @include lg {
-    background-color: coral;
+    //background-color: coral;
     max-width: 1280px;
   }
 
   @include md {
-    background-color: cornflowerblue;
+    //background-color: cornflowerblue;
     max-width: 768px;
   }
 
