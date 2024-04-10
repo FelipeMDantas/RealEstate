@@ -3,7 +3,7 @@ import Layout from "./routes/layout/layout";
 import ListPage from "./routes/listPage/listPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SinglePage from "./routes/singlePage/singlePage";
-import ProfilePage from "./routes/singlePage/profilePage/profilePage";
+import ProfilePage from "./routes/profilePage/profilePage";
 
 function App() {
   const router = createBrowserRouter([

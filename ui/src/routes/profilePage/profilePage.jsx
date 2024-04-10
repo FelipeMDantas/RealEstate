@@ -1,5 +1,6 @@
 import "./profilePage.scss";
-import List from "../../../components/list/List";
+import List from "../../components/list/List";
+import Chat from "../../components/chat/Chat";
 
 function ProfilePage() {
   return (
@@ -19,7 +20,7 @@ function ProfilePage() {
               />
             </span>
             <span>
-              Usermane: <b>Jonh Doe</b>
+              Username: <b>Jonh Doe</b>
             </span>
             <span>
               E-mail: <b>john@gmail.com</b>
@@ -37,7 +38,9 @@ function ProfilePage() {
         </div>
       </div>
       <div className="chatContainer">
-        <div className="wrapper"></div>
+        <div className="wrapper">
+          <Chat />
+        </div>
       </div>
     </div>
   );
