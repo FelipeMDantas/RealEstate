@@ -23,7 +23,7 @@ function ProfileUpdatePage() {
         username,
         email,
         password,
-        avatar: avatar,
+        avatar: avatar[0],
       });
       updateUser(res.data);
       navigate("/profile");
@@ -66,7 +66,7 @@ function ProfileUpdatePage() {
       </div>
       <div className="sideContainer">
         <img
-          src={avatar || currentUser.avatar || "/noavatar.jpg"}
+          src={avatar[0] || currentUser.avatar || "/noavatar.jpg"}
           alt=""
           className="avatar"
         />
