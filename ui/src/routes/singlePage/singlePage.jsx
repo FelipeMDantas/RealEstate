@@ -3,6 +3,7 @@ import Slider from "../../components/slider/Slider";
 import Map from "../../components/map/Map";
 import { singlePostData, userData } from "../../lib/dummydata";
 import { useLoaderData } from "react-router-dom";
+import DOMPurify from "dompurify";
 
 function SinglePage() {
   const post = useLoaderData();
@@ -24,11 +25,16 @@ function SinglePage() {
                 <div className="price">${post.price}</div>
               </div>
               <div className="user">
-                <img src={post.user.img} alt="" />
-                <span>{post.user.name}</span>
+                <img src={post.user.avatar} alt="" />
+                <span>{post.user.username}</span>
               </div>
             </div>
-            <div className="bottom">{post.postDetail.description}</div>
+            <div
+              className="bottom"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(post.postDetail.desc),
+              }}
+            />
           </div>
         </div>
       </div>
@@ -87,7 +93,12 @@ function SinglePage() {
               <img src="/school.png" alt="" />
               <div className="featureText">
                 <span>School</span>
-                <p>{post.postDetail.school}m away</p>
+                <p>
+                  {post.postDetail.school > 999
+                    ? post.postDetail.school / 1000 + "km"
+                    : post.postDetail.school + "m"}
+                  away
+                </p>
               </div>
             </div>
             <div className="feature">
@@ -107,7 +118,7 @@ function SinglePage() {
           </div>
           <p className="title">Location</p>
           <div className="mapContainer">
-            <Map items={[singlePostData]} />
+            <Map items={[post]} />
           </div>
           <div className="buttons">
             <button>
