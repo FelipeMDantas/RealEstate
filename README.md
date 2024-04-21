@@ -2,7 +2,7 @@
 
 ## A website to manage, look for, and chat about real estates advertisements.
 
-![Felipe|Fiverr](https://img.shields.io/badge/FelipeMDantas-RealEstate-yellow)
+![Felipe|RealEstate](https://img.shields.io/badge/FelipeMDantas-RealEstate-yellow)
 
 <p>
 
@@ -14,7 +14,7 @@
 
 ### Take a look at the page
 
-<img src = images/page_gif.gif>
+<img src = gif/page_gif.gif>
 
 ## Tech
 
